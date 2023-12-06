@@ -1,0 +1,27 @@
+.navigation {
+  background-color: #4056A1;
+  height: 120px;
+  color: #FFFFFF;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  position: fixed;
+  top :0;
+  width: 100%;
+  
+  display: flex;
+  align-content: baseline;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.rightnav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: "Source Sans 3";
+}
+.leftnav{
+  padding-top: 2.0em;
+  font-size: xx-large;
+}
