@@ -6,7 +6,10 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -23,3 +26,20 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+:root {
+  font-family: 'Source Sans 3'
+}
+
+nav {
+  font-family: 'Bungee'
+}
+
+.br {
+  display: block;
+  margin-bottom: 0em;
+}
+
+.main {
+  align-items: center;
+
+}
