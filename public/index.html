@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/newtweet.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -59,17 +60,20 @@
       <h2>Compose Tweet</h2>
       <form class ="tweet-line" action="/tweets/" method="POST">
         <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div>
-          <button type="submit">Tweet</button>
+        <textarea name="text"
+        id="tweet-text"
+        placeholder="What are you humming about?"
+        maxlength="140"
+        ></textarea>
+        <div class="tweet-action">
+          <button class="tweet-button" type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
     </section>
-    <h2> What are you humming about?</h2>
-    <button> tweet </button>
-    <h5>140</h5>
-    <hr>
+
+
+
     <h1>LOREM IPSUM</h1>
     <h2> he classic latin passage that just never gets old, enjoy as much (or as little) lorem ipsum as you can handle
       with our easy to use filler text generator.</h2>
