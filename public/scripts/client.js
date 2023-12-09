@@ -57,9 +57,9 @@ $(document).ready(function() {
       <h2>${tweetObject.user.name}</h2>
       </div>
       <div>${tweetObject.user.handle}</div>
-    </header>
-    <p class="tweet-content">${tweetObject.content.text}</p>
-    <footer>
+      </header>
+      <p class="tweet-content">${tweetObject.content.text}</p>
+      <footer>
       <div>
         <time datetime="2023-04-01">${tweetObject.created_at}</time>
       </div>
@@ -68,9 +68,7 @@ $(document).ready(function() {
         <i class="fa-solid fa-retweet"></i>
         <i class="fa-solid fa-heart"></i>
       </div>
-    </footer>
-    `
-  ;
+      </footer>`;
 
     // Set the HTML content of the tweet element
     $tweet.html(html);
