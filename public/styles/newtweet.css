@@ -17,8 +17,8 @@ form.tweet-line {
   padding: 10px 10px 10px 10px;
 
 }
-.counter{
-  color: brown;
+.counter.limit-exceeded{
+  color: red;
 }
 
  div.tweet-action {
