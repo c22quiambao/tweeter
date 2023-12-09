@@ -77,4 +77,38 @@ $(document).ready(function() {
 
   // call function to render old tweet data into the index page
   renderTweets(data);
+
+  // event listener for the form submission
+  $(".tweet-line").submit(function(event) {
+    // prevent default behavior of page refreshing after submit
+    event.preventDefault();
+
+    // extract form data and serialize it
+    const formData = $(this).serialize();
+
+    // Get the tweet text from the form
+    const tweetText = $('#tweet-text').val();
+
+    // Create a data object to send in the AJAX request
+    const tweetData = { text: tweetText };
+
+    // Send an AJAX POST request to the server
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: tweetData,
+      success: function() {
+        // If the request is successful, clear form
+        $('#tweet-text').val('');
+
+        // Fetch and render the updated tweets
+      },
+      error: function(error) {
+        // Handle errors if the request fails
+        console.error('Error submitting tweet:', error);
+      }
+    });
+
+
+  })
 });
