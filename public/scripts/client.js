@@ -21,7 +21,7 @@ $(document).ready(function() {
         console.log('Data received:', data);
         // call function to render old tweet data into the index page
         console.log("calling function renderTweets");
-        renderTweets(data);
+        renderTweets(data.reverse());
       },
       error: function(xhr, status, error) {
         // Handle errors if the request fails
@@ -33,8 +33,9 @@ $(document).ready(function() {
   // function to loop through the old tweet data and append to section with class "old-tweet"
   const renderTweets = function(tweets) {
     // clearing existing tweets container before appending new ones
-    $(".old-tweet").empty();
-
+   $(".old-tweet").empty();
+    console.log('Received tweets from server:', tweets);
+    // loop through tweets
     for (let element of tweets) {
       // call function to create html structure for every element found in the passed object
       console.log('freading first tweet element');
@@ -87,13 +88,15 @@ $(document).ready(function() {
   $(".tweet-line").submit(function(event) {
     // prevent default behavior of page refreshing after submit
     event.preventDefault();
+    console.log("submitted data");
 
     // extract form data and serialize it
     const formData = $(this).serialize();
+    console.log("form data ---> ",formData);
 
     // Get the tweet text from the form
     const tweetText = $('#tweet-text').val();
-
+    console.log("tweetText --->", tweetText );
     // validation for empty tweet
     if (!tweetText.trim()) {
       alert('Error: Your Tweet cannot be empty!');
@@ -114,7 +117,7 @@ $(document).ready(function() {
       url: '/tweets',
       method: 'POST',
       data: tweetData,
-      success: function() {
+      success: function(tweetData) {
         // If the request is successful, clear form and reset counter
         $('#tweet-text').val('');
         $(".counter").val(140);
