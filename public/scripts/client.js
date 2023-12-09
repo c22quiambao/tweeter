@@ -94,6 +94,18 @@ $(document).ready(function() {
     // Get the tweet text from the form
     const tweetText = $('#tweet-text').val();
 
+    // validation for empty tweet
+    if (!tweetText.trim()) {
+      alert('Error: Your Tweet cannot be empty!');
+      return;
+    }
+
+    // validation for over tweet character limit
+    if (tweetText.length > 140) {
+      alert('Error: Your Tweet exceeds the maximum 140 character limit!');
+      return;
+    }
+
     // Create a data object to send in the AJAX request
     const tweetData = { text: tweetText };
 
