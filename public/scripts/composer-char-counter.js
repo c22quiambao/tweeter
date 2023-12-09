@@ -1,10 +1,5 @@
-$(document).ready(function () {
-  console.log('Document is ready!');
-});
-
-
-
 $(document).ready(function() {
+  console.log('Document is ready!');
   // Register an event handler for the textarea
   $('.new-tweet textarea').on('input', function() {
 
