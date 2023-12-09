@@ -7,6 +7,21 @@
 // using jQuery to render stored tweets index page
 $(document).ready(function() {
   console.log('Document is ready!');
+  const $errorContainer = $('#error-container');
+
+  // Function to display an error message
+  function displayError(message) {
+    $errorContainer.addClass('visible-element');
+    $errorContainer.text(message).slideDown();
+
+  }
+
+  // Function to hide the error message
+  function hideError() {
+    $errorContainer.removeClass('visible-element');
+    $errorContainer.slideUp();
+
+  }
 
   // function to load tweets
   const loadtweets = function() {
@@ -109,15 +124,17 @@ const escape = function (str) {
     console.log("tweetText --->", tweetText );
     // validation for empty tweet
     if (!tweetText.trim()) {
-      alert('Error: Your Tweet cannot be empty!');
+      displayError('Error: Your Tweet cannot be empty!');
       return;
     }
 
     // validation for over tweet character limit
     if (tweetText.length > 140) {
-      alert('Error: Your Tweet exceeds the maximum 140 character limit!');
+      displayError('Error: Your Tweet exceeds the maximum 140 character limit!');
       return;
     }
+    // If validation passes, hide the error message
+    hideError();
 
     // Create a data object to send in the AJAX request
     const tweetData = { text: tweetText };
