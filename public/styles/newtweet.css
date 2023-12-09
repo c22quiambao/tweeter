@@ -1,0 +1,36 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+}
+form.tweet-line {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet-button {
+  color: white;
+  font-family: "bungee";
+  background-color: #4056A1;
+  border: none;
+  font-size: smaller;
+  border-radius: 5px;
+  padding: 10px 10px 10px 10px;
+
+}
+.counter{
+  color: brown;
+}
+
+ div.tweet-action {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+textarea:focus, input:focus, textarea{
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid;
+}
