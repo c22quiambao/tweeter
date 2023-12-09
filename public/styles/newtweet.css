@@ -36,6 +36,7 @@ textarea:focus, input:focus, textarea{
   border-left: none;
   border-right: none;
   border-bottom: solid;
+  background: #f4f1ec;
 }
 .tweet-button:hover{
   color: white;
