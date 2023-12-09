@@ -9,7 +9,7 @@ $(document).ready(function() {
   console.log('Document is ready!');
 
   // create object that holds old tweet data
-  const data = [
+  /*const data = [
     {
       "user": {
         "name": "Newton",
@@ -32,7 +32,29 @@ $(document).ready(function() {
       },
       "created_at": 1461113959088
     }
-  ];
+  ];*/
+
+  // function to load tweets
+  const loadtweets = function() {
+    // Get tweets from  tweets url
+    $.ajax({
+      url: 'http://localhost:8080/tweets',
+      method: 'GET',
+      dataType: 'json',
+      success: function(data) {
+       // processReceivedData(data);
+        console.log("!!!!")
+        console.log('Data received:', data);
+        // call function to render old tweet data into the index page
+        console.log("calling function renderTweets");
+        renderTweets(data);
+      },
+      error: function(xhr, status, error) {
+        // Handle errors if the request fails
+        console.error('Error fetching data:', error);
+      }
+    });
+  };
 
   // function to loop through the old tweet data and append to section with class "old-tweet"
   const renderTweets = function(tweets) {
@@ -75,8 +97,11 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  // call function to render old tweet data into the index page
-  renderTweets(data);
+
+
+  // load tweets
+  console.log("calling function loadtweets");
+  loadtweets();
 
   // event listener for the form submission
   $(".tweet-line").submit(function(event) {
@@ -100,15 +125,17 @@ $(document).ready(function() {
       success: function() {
         // If the request is successful, clear form
         $('#tweet-text').val('');
-
+        console.log("success ajax call");
         // Fetch and render the updated tweets
+        console.log("****")
+        // call function to render old tweet data into the index page
+        console.log("calling function loadtweets again");
+        loadtweets();
       },
       error: function(error) {
         // Handle errors if the request fails
         console.error('Error submitting tweet:', error);
       }
     });
-
-
   })
 });
