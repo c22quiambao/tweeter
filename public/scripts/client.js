@@ -46,22 +46,32 @@ $(document).ready(function() {
     console.log('finished redering tweets for all elements');
   };
 
+// Function to escape special characters in a string
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+
   // function to create tweet element to use for page rendering
   const createTweetElement = function(tweetObject) {
 
     // Create a new div element to represent the tweet
     const $tweet = $("<article>").addClass("tweet");
+  // Escape user-generated content before including it in the HTML
+  const escapedText = escape(tweetObject.content.text);
 
     // Create the HTML structure for the tweet content
     const html = `
       <header>
       <div>
-      <img src="${tweetObject.user.avatars}" alt="User Avatar">
-      <h2>${tweetObject.user.name}</h2>
+      <img src="${escape(tweetObject.user.avatars)}" alt="User Avatar">
+      <h2>${escape(tweetObject.user.name)}</h2>
       </div>
-      <div>${tweetObject.user.handle}</div>
+      <div>${escape(tweetObject.user.handle)}</div>
       </header>
-      <p class="tweet-content">${tweetObject.content.text}</p>
+      <p class="tweet-content">${escapedText}</p>
       <footer>
       <div>
         <time class="time-ago">${timeago.format(tweetObject.created_at)}</time>
