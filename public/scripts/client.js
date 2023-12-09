@@ -32,6 +32,9 @@ $(document).ready(function() {
 
   // function to loop through the old tweet data and append to section with class "old-tweet"
   const renderTweets = function(tweets) {
+    // clearing existing tweets container before appending new ones
+    $(".old-tweet").empty();
+
     for (let element of tweets) {
       // call function to create html structure for every element found in the passed object
       console.log('freading first tweet element');
