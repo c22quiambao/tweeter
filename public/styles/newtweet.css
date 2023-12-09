@@ -1,6 +1,7 @@
 .new-tweet {
   display: flex;
   flex-direction: column;
+  row-gap: 10px;
 }
 form.tweet-line {
   display: flex;
@@ -48,4 +49,12 @@ textarea:focus, input:focus, textarea{
 .tweet-button:active {
   background-color: #2c3e50;
   border-color: #1f2b38;
+}
+.visible-element {
+  color: red;
+    border: red;
+    border-style: solid;
+    font-size: larger;
+    align-self: center;
+    padding: 20px;
 }
