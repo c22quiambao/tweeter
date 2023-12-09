@@ -34,11 +34,6 @@ nav {
   font-family: 'Bungee', sans-serif
 }
 
-.br {
-  display: block;
-  margin-bottom: 0em;
-}
-
 main.container {
   display : flex;
   flex-wrap: wrap;
@@ -46,6 +41,64 @@ main.container {
   align-items: stretch;
   padding-left: 5%;
   padding-right: 5%;
+}
 
 
+section.oldtweet {
+  display : flex;
+  flex-wrap: wrap;
+}
+article{
+  border: black;
+  border-style: solid;
+  display : flex;
+  flex-direction: column;
+  padding: 9px;
+  margin-block: 1%;
+
+}
+article.tweet header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+article.tweet div{
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+article.tweet footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 2%;
+  padding-right: 2%;
+
+}
+article.tweet p{
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid;
+  text-align: justify;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 1%;
+  padding-top: 0%;
+  margin-block-end: 0.5em;
+}
+
+article:hover{
+  background-color: #f0f0f000;
+  border: 2px solid black;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.575);
+}
+
+i:hover{
+  color: purple;
+  cursor: pointer;
 }
