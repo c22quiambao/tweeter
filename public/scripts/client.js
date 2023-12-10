@@ -79,19 +79,19 @@ const escape = function (str) {
 
     // Create the HTML structure for the tweet content
     const html = `
-      <header>
-      <div>
-      <img src="${escape(tweetObject.user.avatars)}" alt="User Avatar">
-      <h2>${escape(tweetObject.user.name)}</h2>
+      <header class="old-tweet-header">
+      <div class="header-container">
+      <img class="avatar" src="${escape(tweetObject.user.avatars)}" alt="User Avatar">
+      <h3 class="user-name">${escape(tweetObject.user.name)}</h2>
+      <h4 class="user-handle">${escape(tweetObject.user.handle)}</h2>
       </div>
-      <div>${escape(tweetObject.user.handle)}</div>
       </header>
-      <p class="tweet-content">${escapedText}</p>
-      <footer>
-      <div>
+      <p class="old-tweet-content">${escapedText}</p>
+      <footer class="old-tweet-footer">
+      <div id="time">
         <time class="time-ago">${timeago.format(tweetObject.created_at)}</time>
       </div>
-      <div>
+      <div id="icon-butons">
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
         <i class="fa-solid fa-heart"></i>
