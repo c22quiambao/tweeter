@@ -21,6 +21,9 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  /* I added this*/
+  display : flex;
+  padding-top : 140px;
 }
 
 /*
@@ -43,11 +46,12 @@ main.container {
   padding-right: 5%;
 }
 
-
+/* Styleing for old tweets */
 section.oldtweet {
   display : flex;
   flex-wrap: wrap;
 }
+
 article{
   border: black;
   border-style: solid;
@@ -55,30 +59,33 @@ article{
   flex-direction: column;
   padding: 9px;
   margin-block: 1%;
-
 }
-article.tweet header{
+.header-container{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-article.tweet div{
-  display:flex;
-  flex-wrap:wrap;
   flex-direction: row;
   align-items: center;
-  padding-right: 50px;
+}
+.avatar{
+  margin-right: 10px;
+}
+.user-name{
+  display : flex;
+  flex-basis: 50%;
 }
 
-article.tweet footer{
+.user-handle{
+  color: lightslategray;
+  margin-right: 0;
+}
+
+.old-tweet-footer{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   padding-left: 2%;
   padding-right: 2%;
-
+  justify-content: space-between;
 }
-article.tweet p{
+.old-tweet-content{
   outline: none;
   border-top: none;
   border-left: none;
@@ -103,3 +110,35 @@ i:hover{
   color: purple;
   cursor: pointer;
 }
+div#icon-butons{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 17px;
+}
+div#time{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+
+/* Tablet Styles */
+/*
+@media only screen and (min-width: 768px) {
+  .feature {
+    width: 33.33%;
+    line-height: 600px;
+    margin-top: 120px;
+    height: 400px;
+  }
+
+  .content {
+    width: 66.7%;
+    float: right
+  }
+
+  .footer {
+    clear: right;
+  }
+}*/

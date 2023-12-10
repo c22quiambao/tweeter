@@ -1,11 +1,18 @@
 .header {
   background-color: rgb(216, 139, 67);
-  height: 520px;
+  height: 360px;
   display:flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
   background-image: url("../images/carbon-fibre-v2.png");
   color: white;
+  width : 33%;
+  align-self: auto;
   }
 
+.userimage{
+  margin-top: 20px;
+}
+.realname{
+  margin-top: 4px;
+}

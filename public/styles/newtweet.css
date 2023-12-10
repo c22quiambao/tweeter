@@ -21,15 +21,28 @@ form.tweet-line {
 .counter.limit-exceeded{
   color: red;
 }
-
- div.tweet-action {
+div.tweet-buttons{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: space-between;
+}
+div.tweet-action {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
   padding-left: 1%;
   padding-right: 3%;
   padding-top: 1%;
+  justify-content: flex-start;
+}
+div.counter{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 1%;
+  padding-right: 3%;
+  padding-top: 1%;
+  justify-content: flex-end;
+  font-family: "Bungee";
 }
 textarea:focus, input:focus, textarea{
   outline: none;
@@ -38,6 +51,11 @@ textarea:focus, input:focus, textarea{
   border-right: none;
   border-bottom: solid;
   background: #f4f1ec;
+}
+#tweet-text::placeholder{
+  font-size: larger;
+  color: black;
+  font-weight: bold;
 }
 .tweet-button:hover{
   color: white;
