@@ -1,3 +1,4 @@
+/* stylings for navigation elements*/
 .navigation {
   background-color: #4056A1;
   height: 120px;
@@ -5,7 +6,7 @@
   padding-left: 1.5em;
   padding-right: 1.5em;
   position: fixed;
-  top :0;
+  top: 0;
   width: 100%;
   display: flex;
   align-content: baseline;
@@ -13,14 +14,28 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.rightnav{
+
+.rightnav {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   font-family: "Source Sans 3";
 }
-.leftnav{
+
+.leftnav {
   padding-top: 2.0em;
   font-size: xx-large;
+}
+
+/* Smartphones to tablet: minimum width of 320px to maximum width of around 767px */
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .navigation {
+    background: transparent;
+    gap: 0;
+    top: 0;
+    position: fixed;
+    font-size: inherit;
+    margin-top: -30px;
+  }
 }
