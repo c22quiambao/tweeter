@@ -35,7 +35,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- timeago library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -50,31 +52,37 @@
       <i class="fa-solid fa-angles-down fa-beat"></i>
     </div>
   </nav>
-  <header class="header">
-    <div>
-      <img src="/images/profile-hex.png">
-    </div>
-    <div>
-      <h2>Fairy Kisses</h2>
-    </div>
-  </header>
+
+    <header class="header feature">
+      <div >
+        <img class="userimage" src="/images/profile-hex.png">
+      </div>
+      <div>
+        <h2 class="realname">Fairy Kisses</h2>
+      </div>
+    </header>
+
   <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-      <h2>Compose Tweet</h2>
-      <div id="error-container"></div>
-      <form class="tweet-line" action="/tweets/" method="POST">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div class="tweet-action">
-          <button class="tweet-button" type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-      <section class="old-tweet">
+
+    <main class="container content">
+      <section class="new-tweet">
+        <div id="error-container"></div>
+        <form class="tweet-line" action="/tweets/" method="POST">
+           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <div class="tweet-buttons">
+            <div class="tweet-action">
+              <button class="tweet-button" type="submit">Tweet</button>
+            </div>
+            <div class="counter">
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </div>
+        </form>
+        <section class="old-tweet">
+        </section>
       </section>
-    </section>
-  </main>
+    </main>
+
 </body>
 
 </html>
