@@ -19,6 +19,7 @@ $(document).ready(function() {
   const hideError = function() {
     $errorContainer.removeClass('visible-element');
     $errorContainer.slideUp();
+    $errorContainer.text('');
   };
 
   // function to load tweets
@@ -139,7 +140,9 @@ $(document).ready(function() {
 
         // If the request is successful, clear form and reset counter
         $('#tweet-text').val('');
-        $(".counter").val(140);
+        $(".counter").text(140);
+       // calculate remaining characters
+      let remChars = 140;
 
         // call function to load tweets into the index page
         loadtweets();

@@ -60,6 +60,7 @@ textarea {
   border-right: none;
   border-bottom: solid;
   background: #f4f1ec;
+  margin-top: 50px;
 }
 
 #tweet-text::placeholder {
