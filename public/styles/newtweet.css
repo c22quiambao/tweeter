@@ -1,8 +1,10 @@
+/* stylings for new tweet elements*/
 .new-tweet {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
 }
+
 form.tweet-line {
   display: flex;
   flex-direction: column;
@@ -18,15 +20,18 @@ form.tweet-line {
   padding: 10px 10px 10px 10px;
 
 }
-.counter.limit-exceeded{
+
+.counter.limit-exceeded {
   color: red;
 }
-div.tweet-buttons{
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
-justify-content: space-between;
+
+div.tweet-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
 div.tweet-action {
   display: flex;
   flex-wrap: wrap;
@@ -35,7 +40,8 @@ div.tweet-action {
   padding-top: 1%;
   justify-content: flex-start;
 }
-div.counter{
+
+div.counter {
   display: flex;
   flex-wrap: wrap;
   padding-left: 1%;
@@ -44,7 +50,10 @@ div.counter{
   justify-content: flex-end;
   font-family: "Bungee";
 }
-textarea:focus, input:focus, textarea{
+
+textarea:focus,
+input:focus,
+textarea {
   outline: none;
   border-top: none;
   border-left: none;
@@ -52,27 +61,31 @@ textarea:focus, input:focus, textarea{
   border-bottom: solid;
   background: #f4f1ec;
 }
-#tweet-text::placeholder{
+
+#tweet-text::placeholder {
   font-size: larger;
   color: black;
   font-weight: bold;
 }
-.tweet-button:hover{
+
+.tweet-button:hover {
   color: white;
   background-color: #4056A1;
   font-family: "bungee";
   cursor: pointer;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.575);
 }
+
 .tweet-button:active {
   background-color: #2c3e50;
   border-color: #1f2b38;
 }
+
 .visible-element {
   color: red;
-    border: red;
-    border-style: solid;
-    font-size: larger;
-    align-self: center;
-    padding: 20px;
+  border: red;
+  border-style: solid;
+  font-size: larger;
+  align-self: center;
+  padding: 20px;
 }
