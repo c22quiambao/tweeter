@@ -21,9 +21,8 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  /* I added this*/
-  display : flex;
-  padding-top : 140px;
+  display: flex;
+  padding-top: 140px;
 }
 
 /*
@@ -39,55 +38,59 @@ nav {
 
 /* Styling for main container */
 main.container {
-  display : flex;
+  display: flex;
   flex-wrap: wrap;
-  flex-direction : column;
+  flex-direction: column;
   align-items: stretch;
   padding-left: 5%;
   padding-right: 5%;
-  width : 60%;
+  width: 60%;
 }
 
 /* Styling for old tweets elements */
 section.oldtweet {
-  display : flex;
+  display: flex;
   flex-wrap: wrap;
 }
 
-article{
+article {
   border: black;
   border-style: solid;
-  display : flex;
+  display: flex;
   flex-direction: column;
   padding: 9px;
   margin-block: 1%;
 }
-.header-container{
+
+.header-container {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.avatar{
+
+.avatar {
   margin-right: 10px;
 }
-.user-name{
-  display : flex;
+
+.user-name {
+  display: flex;
   flex-basis: 75%;
 }
 
-.user-handle{
+.user-handle {
   color: lightslategray;
   margin-right: 0;
 }
 
-.old-tweet-footer{
+.old-tweet-footer {
   display: flex;
   flex-direction: row;
   padding-left: 2%;
   padding-right: 2%;
   justify-content: space-between;
 }
-.old-tweet-content{
+
+.old-tweet-content {
   outline: none;
   border-top: none;
   border-left: none;
@@ -101,25 +104,47 @@ article{
   margin-block-end: 0.5em;
 }
 
-article:hover{
+article:hover {
   background-color: #f0f0f000;
   border: 2px solid black;
   cursor: pointer;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.575);
 }
 
-i:hover{
+i:hover {
   color: purple;
   cursor: pointer;
 }
-div#icon-butons{
+
+div#icon-butons {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   gap: 17px;
 }
-div#time{
+
+div#time {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+}
+
+/* Smartphones to tablet: minimum width of 320px to maximum width of around 767px */
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  body {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: inherit;
+  }
+
+  body.scrolled nav {
+    background-color: rgb(216, 139, 67);
+    background-image: url("../images/carbon-fibre-v2.png");
+  }
+
+  main.container {
+    width: 100%;
+  }
 }
