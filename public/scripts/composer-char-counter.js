@@ -1,3 +1,5 @@
+/* Jquery to handel computing character counter for tweet composition*/
+
 $(document).ready(function() {
   console.log('Document is ready!');
   // Register an event handler for the textarea
@@ -5,11 +7,9 @@ $(document).ready(function() {
 
     // capture characters entered on the text area
     let currTweet = $(this).val();
-    console.log("New Tweet ---> ",currTweet);
 
     // calculate remaining characters
     let remChars = 140 - currTweet.length;
-    console.log("character remaining --->>", remChars);
 
     // Select the counter element
     let $counter = $(this).closest('.new-tweet').find('.counter');
