@@ -1,19 +1,37 @@
+/* stylings for header elements*/
 .header {
   background-color: rgb(216, 139, 67);
   height: 360px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   background-image: url("../images/carbon-fibre-v2.png");
   color: white;
-  width : 33%;
+  width: 33%;
   align-self: auto;
   margin: 50px;
-  }
+}
 
-.userimage{
+.userimage {
   margin-top: 20px;
 }
-.realname{
+
+.realname {
   margin-top: 4px;
+}
+
+/* Smartphones to tablet: minimum width of 320px to maximum width of around 767px */
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .header {
+    width: 100%;
+    height: 100%;
+    margin: 1px;
+    margin-bottom: 40px;
+  }
+
+  .userimage {
+    width: 55%;
+    padding-top: 23%;
+    margin-left: 20%;
+  }
 }
