@@ -71,7 +71,7 @@ $(document).ready(function() {
 
     // Create a new div element to represent the tweet
     const $tweet = $("<article>").addClass("tweet");
-    
+
     // Escape user-generated content before including it in the HTML
     const escapedText = escape(tweetObject.content.text);
 
@@ -104,7 +104,7 @@ $(document).ready(function() {
   // load tweets
   loadtweets();
 
-  // event listener for the form submission
+  //  for the form submission
   $(".tweet-line").submit(function(event) {
 
     // prevent default behavior of page refreshing after submit
